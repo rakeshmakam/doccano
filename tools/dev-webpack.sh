@@ -14,5 +14,5 @@ frontend="${root}/app/server/static"
   fi
 
   echo "Starting webpack"
-  npm start
+  npm run build
 )
