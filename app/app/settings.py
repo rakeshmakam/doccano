@@ -242,9 +242,9 @@ USE_TZ = True
 TEST_RUNNER = 'xmlrunner.extra.djangotestrunner.XMLTestRunner'
 TEST_OUTPUT_DIR = path.join(BASE_DIR, 'junitxml')
 
-LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/projects/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/annotate/login/'
+LOGIN_REDIRECT_URL = '/annotate/projects/'
+LOGOUT_REDIRECT_URL = '/annotate/'
 
 django_heroku.settings(locals(), test_runner=False)
 

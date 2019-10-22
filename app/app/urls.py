@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from django.contrib.auth.views import PasswordResetView, LogoutView
 from server.views import LoginView
-
+from django.conf.urls import include, url
 
 urlpatterns = [
     path('', include('authentification.urls')),
@@ -31,6 +31,9 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('v1/', include('api.urls')),
 ]
+
+# adding prefix to all routes in django
+urlpatterns = [url(r'^annotate/', include(urlpatterns))]
 
 if 'cloud_browser' in settings.INSTALLED_APPS:
     urlpatterns.append(path('cloud-storage/', include('cloud_browser.urls')))
