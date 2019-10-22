@@ -210,7 +210,7 @@ export default {
       };
       defaultHttpClient.post('/v1/projects', payload)
         .then((response) => {
-          window.location = `/projects/${response.data.id}/docs/create`;
+          window.location = `/annotate/projects/${response.data.id}/docs/create`;
         })
         .catch((error) => {
           this.projectTypeError = '';

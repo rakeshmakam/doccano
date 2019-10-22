@@ -244,7 +244,7 @@ TEST_OUTPUT_DIR = path.join(BASE_DIR, 'junitxml')
 
 LOGIN_URL = '/annotate/login/'
 LOGIN_REDIRECT_URL = '/annotate/projects/'
-LOGOUT_REDIRECT_URL = '/annotate/'
+LOGOUT_REDIRECT_URL = '/annotate/login/'
 
 django_heroku.settings(locals(), test_runner=False)
 
